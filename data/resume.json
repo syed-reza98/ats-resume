@@ -1,0 +1,155 @@
+{
+  "basics": {
+    "name": "Alex J. Rivera",
+    "title": "Senior Software Engineer",
+    "location": "San Francisco, CA",
+    "phone": "(415) 555-0192",
+    "email": "alex.rivera@email.com",
+    "github": "github.com/alexjrivera",
+    "linkedin": "linkedin.com/in/alexjrivera"
+  },
+  "summary": "Results-driven Senior Software Engineer with 7+ years of experience designing, building, and scaling distributed systems and cloud-native applications. Proven track record of delivering high-impact features that improve performance and reliability for millions of users. Proficient in full-stack development with a focus on back-end architecture, API design, and DevOps practices. Passionate about clean code, developer experience, and mentoring engineering teams.",
+  "experience": [
+    {
+      "id": "exp-1",
+      "company": "Nexus Technologies",
+      "role": "Senior Software Engineer",
+      "date": "Jan 2022 – Present",
+      "isActive": true,
+      "bullets": [
+        {
+          "id": "exp-1-b1",
+          "text": "Architected and led the migration of a monolithic Ruby on Rails application to a microservices architecture using Node.js and Kubernetes, reducing deployment frequency from bi-weekly to multiple times per day.",
+          "isActive": true,
+          "tags": ["architecture", "microservices", "kubernetes", "node.js"]
+        },
+        {
+          "id": "exp-1-b2",
+          "text": "Designed and implemented a real-time event streaming pipeline using Apache Kafka and AWS Lambda, processing over 50 million events per day with 99.99% uptime.",
+          "isActive": true,
+          "tags": ["kafka", "aws", "lambda", "streaming", "distributed-systems"]
+        },
+        {
+          "id": "exp-1-b3",
+          "text": "Reduced API response latency by 68% by introducing Redis caching layers and optimizing PostgreSQL query plans across the core transaction service.",
+          "isActive": true,
+          "tags": ["performance", "redis", "postgresql", "optimization"]
+        },
+        {
+          "id": "exp-1-b4",
+          "text": "Mentored a team of 4 junior and mid-level engineers through bi-weekly 1:1s, code reviews, and internal tech talks, contributing to 2 team promotions.",
+          "isActive": true,
+          "tags": ["mentorship", "leadership", "code-review"]
+        },
+        {
+          "id": "exp-1-b5",
+          "text": "Championed and implemented a company-wide shift to trunk-based development with feature flags, eliminating long-lived feature branches and reducing merge conflicts by 90%.",
+          "isActive": true,
+          "tags": ["devops", "ci-cd", "feature-flags", "git"]
+        }
+      ]
+    },
+    {
+      "id": "exp-2",
+      "company": "CloudBridge Inc.",
+      "role": "Software Engineer II",
+      "date": "Jun 2019 – Dec 2021",
+      "isActive": true,
+      "bullets": [
+        {
+          "id": "exp-2-b1",
+          "text": "Built and maintained RESTful and GraphQL APIs consumed by 3 internal teams and 2 external enterprise clients, serving 1.2 million active monthly users.",
+          "isActive": true,
+          "tags": ["api", "graphql", "rest", "backend"]
+        },
+        {
+          "id": "exp-2-b2",
+          "text": "Developed an automated data reconciliation system in Python that replaced a 20-hour manual weekly process, saving the data team approximately 1,000 hours per year.",
+          "isActive": true,
+          "tags": ["python", "automation", "data-engineering"]
+        },
+        {
+          "id": "exp-2-b3",
+          "text": "Improved CI/CD pipeline build times by 55% by parallelizing test suites in GitHub Actions and introducing Docker layer caching strategies.",
+          "isActive": true,
+          "tags": ["ci-cd", "github-actions", "docker", "devops"]
+        },
+        {
+          "id": "exp-2-b4",
+          "text": "Collaborated with the product and design teams to deliver a full-stack Next.js dashboard for enterprise clients, increasing user engagement metrics by 40%.",
+          "isActive": true,
+          "tags": ["next.js", "react", "full-stack", "typescript"]
+        },
+        {
+          "id": "exp-2-b5",
+          "text": "Authored internal developer documentation and runbooks that reduced on-call incident resolution time from an average of 45 minutes to under 15 minutes.",
+          "isActive": true,
+          "tags": ["documentation", "on-call", "reliability"]
+        }
+      ]
+    },
+    {
+      "id": "exp-3",
+      "company": "StartupForge",
+      "role": "Software Engineer",
+      "date": "Aug 2017 – May 2019",
+      "isActive": true,
+      "bullets": [
+        {
+          "id": "exp-3-b1",
+          "text": "Developed core features for a SaaS B2B platform from 0 to 1, including user authentication (OAuth 2.0 / JWT), billing integrations (Stripe), and role-based access control.",
+          "isActive": true,
+          "tags": ["saas", "oauth", "stripe", "authentication", "rbac"]
+        },
+        {
+          "id": "exp-3-b2",
+          "text": "Built responsive React front-end components and a Node.js/Express back-end, delivering the MVP that secured a $2M seed funding round.",
+          "isActive": true,
+          "tags": ["react", "node.js", "express", "mvp"]
+        },
+        {
+          "id": "exp-3-b3",
+          "text": "Instrumented application monitoring and alerting using Datadog and PagerDuty, achieving observability across all critical services for the first time.",
+          "isActive": true,
+          "tags": ["monitoring", "datadog", "observability", "alerting"]
+        }
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": "proj-1",
+      "name": "OpenTrace – Distributed Tracing SDK",
+      "tech": "Go, gRPC, OpenTelemetry, Docker",
+      "description": "Open-source lightweight distributed tracing SDK for Go microservices. Implements the OpenTelemetry specification with automatic context propagation. Garnered 850+ GitHub stars and adopted by 3 open-source projects.",
+      "isActive": true
+    },
+    {
+      "id": "proj-2",
+      "name": "ResumeForge – AI Resume Tailoring Tool",
+      "tech": "Next.js, TypeScript, OpenAI API, Supabase",
+      "description": "Full-stack SaaS application that uses LLM-based keyword extraction to help job seekers tailor their resumes to specific job descriptions. Processed 10,000+ resume exports in beta.",
+      "isActive": true
+    },
+    {
+      "id": "proj-3",
+      "name": "PriceWatch – E-Commerce Price Tracker",
+      "tech": "Python, FastAPI, PostgreSQL, Redis, React",
+      "description": "Web scraping and price alerting platform that monitors prices across 5 major retailers. Sends real-time alerts via email and SMS (Twilio). Supports 500+ concurrent user watchlists.",
+      "isActive": true
+    },
+    {
+      "id": "proj-4",
+      "name": "CodePulse – Developer Analytics Dashboard",
+      "tech": "React, D3.js, Node.js, GitHub API",
+      "description": "Personal productivity dashboard that aggregates GitHub contribution data and surfaces coding velocity trends, commit patterns, and code review turnaround times using interactive D3.js visualizations.",
+      "isActive": true
+    }
+  ],
+  "skills": {
+    "Languages": ["TypeScript", "JavaScript", "Python", "Go", "SQL", "Bash", "Ruby"],
+    "Frameworks": ["Node.js", "React", "Next.js", "Express", "FastAPI", "GraphQL", "gRPC"],
+    "Cloud": ["AWS (EC2, Lambda, S3, RDS, SQS)", "GCP (GKE, Cloud Run)", "Docker", "Kubernetes", "Terraform", "GitHub Actions"],
+    "Databases": ["PostgreSQL", "MySQL", "Redis", "MongoDB", "DynamoDB", "Apache Kafka"]
+  }
+}
