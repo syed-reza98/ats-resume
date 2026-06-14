@@ -1,117 +1,78 @@
 {
   "basics": {
-    "name": "Alex J. Rivera",
-    "title": "Senior Software Engineer",
-    "location": "San Francisco, CA",
-    "phone": "(415) 555-0192",
-    "email": "alex.rivera@email.com",
-    "github": "github.com/alexjrivera",
-    "linkedin": "linkedin.com/in/alexjrivera"
+    "name": "Syed Salman Reza",
+    "title": "Software Engineer",
+    "location": "Dhaka, Bangladesh",
+    "phone": "+880-1970279556",
+    "email": "syed.reza181@gmail.com",
+    "github": "github.com/syed-reza98",
+    "linkedin": "linkedin.com/in/salman-reza"
   },
-  "summary": "Results-driven Senior Software Engineer with 7+ years of experience designing, building, and scaling distributed systems and cloud-native applications. Proven track record of delivering high-impact features that improve performance and reliability for millions of users. Proficient in full-stack development with a focus on back-end architecture, API design, and DevOps practices. Passionate about clean code, developer experience, and mentoring engineering teams.",
+  "summary": "Results-driven Software Engineer with proven expertise in backend and full-stack development. Skilled in PHP (Laravel), Python (Flask), and React (Next.js), with hands-on experience in designing scalable microservices, API development, and multi-tenant database optimization. Experienced in multi-vendor ATM/CRM EJ log data extraction, modernizing legacy banking systems, and cloud deployment. Passionate about solving complex problems and delivering high-quality software.",
   "experience": [
     {
       "id": "exp-1",
-      "company": "Nexus Technologies",
-      "role": "Senior Software Engineer",
-      "date": "Jan 2022 – Present",
+      "company": "Networld Technology Limited",
+      "role": "Software Engineer",
+      "date": "10/2022 - Present",
       "isActive": true,
       "bullets": [
         {
           "id": "exp-1-b1",
-          "text": "Architected and led the migration of a monolithic Ruby on Rails application to a microservices architecture using Node.js and Kubernetes, reducing deployment frequency from bi-weekly to multiple times per day.",
+          "text": "Designed and developed a microservices-based Reconciliation System using Python (Flask API) and ElectronJS.",
           "isActive": true,
-          "tags": ["architecture", "microservices", "kubernetes", "node.js"]
+          "tags": ["python", "flask", "microservices", "electronjs", "backend"]
         },
         {
           "id": "exp-1-b2",
-          "text": "Designed and implemented a real-time event streaming pipeline using Apache Kafka and AWS Lambda, processing over 50 million events per day with 99.99% uptime.",
+          "text": "Managed version upgrades and optimization for legacy .NET banking applications (IMS: Incident Management System).",
           "isActive": true,
-          "tags": ["kafka", "aws", "lambda", "streaming", "distributed-systems"]
+          "tags": [".net", "optimization", "legacy systems", "banking"]
         },
         {
           "id": "exp-1-b3",
-          "text": "Reduced API response latency by 68% by introducing Redis caching layers and optimizing PostgreSQL query plans across the core transaction service.",
+          "text": "Led full project lifecycles, deploying Laravel applications across both Windows Server (IIS) and AWS.",
           "isActive": true,
-          "tags": ["performance", "redis", "postgresql", "optimization"]
+          "tags": ["laravel", "php", "aws", "iis", "deployment", "sdlc"]
         },
         {
           "id": "exp-1-b4",
-          "text": "Mentored a team of 4 junior and mid-level engineers through bi-weekly 1:1s, code reviews, and internal tech talks, contributing to 2 team promotions.",
+          "text": "Implemented CI/CD pipelines to ensure automated and reliable software deployments.",
           "isActive": true,
-          "tags": ["mentorship", "leadership", "code-review"]
-        },
-        {
-          "id": "exp-1-b5",
-          "text": "Championed and implemented a company-wide shift to trunk-based development with feature flags, eliminating long-lived feature branches and reducing merge conflicts by 90%.",
-          "isActive": true,
-          "tags": ["devops", "ci-cd", "feature-flags", "git"]
+          "tags": ["ci/cd", "devops", "automation", "git"]
         }
       ]
     },
     {
       "id": "exp-2",
-      "company": "CloudBridge Inc.",
-      "role": "Software Engineer II",
-      "date": "Jun 2019 – Dec 2021",
+      "company": "Walkinroom",
+      "role": "Full Stack Developer",
+      "date": "04/2022 - 09/2022",
       "isActive": true,
       "bullets": [
         {
           "id": "exp-2-b1",
-          "text": "Built and maintained RESTful and GraphQL APIs consumed by 3 internal teams and 2 external enterprise clients, serving 1.2 million active monthly users.",
+          "text": "Developed and maintained a hotel booking platform utilizing Laravel for the backend and Tailwind CSS with JavaScript for the frontend.",
           "isActive": true,
-          "tags": ["api", "graphql", "rest", "backend"]
+          "tags": ["laravel", "php", "tailwindcss", "javascript", "full-stack"]
         },
         {
           "id": "exp-2-b2",
-          "text": "Developed an automated data reconciliation system in Python that replaced a 20-hour manual weekly process, saving the data team approximately 1,000 hours per year.",
+          "text": "Designed and optimized MySQL schemas to execute high-performance database queries.",
           "isActive": true,
-          "tags": ["python", "automation", "data-engineering"]
+          "tags": ["mysql", "database design", "optimization", "sql"]
         },
         {
           "id": "exp-2-b3",
-          "text": "Improved CI/CD pipeline build times by 55% by parallelizing test suites in GitHub Actions and introducing Docker layer caching strategies.",
+          "text": "Conducted rigorous code reviews, significantly improving team-wide coding standards.",
           "isActive": true,
-          "tags": ["ci-cd", "github-actions", "docker", "devops"]
+          "tags": ["code review", "best practices", "collaboration"]
         },
         {
           "id": "exp-2-b4",
-          "text": "Collaborated with the product and design teams to deliver a full-stack Next.js dashboard for enterprise clients, increasing user engagement metrics by 40%.",
+          "text": "Collaborated with UI/UX and product teams to deliver intuitive, user-focused software solutions.",
           "isActive": true,
-          "tags": ["next.js", "react", "full-stack", "typescript"]
-        },
-        {
-          "id": "exp-2-b5",
-          "text": "Authored internal developer documentation and runbooks that reduced on-call incident resolution time from an average of 45 minutes to under 15 minutes.",
-          "isActive": true,
-          "tags": ["documentation", "on-call", "reliability"]
-        }
-      ]
-    },
-    {
-      "id": "exp-3",
-      "company": "StartupForge",
-      "role": "Software Engineer",
-      "date": "Aug 2017 – May 2019",
-      "isActive": true,
-      "bullets": [
-        {
-          "id": "exp-3-b1",
-          "text": "Developed core features for a SaaS B2B platform from 0 to 1, including user authentication (OAuth 2.0 / JWT), billing integrations (Stripe), and role-based access control.",
-          "isActive": true,
-          "tags": ["saas", "oauth", "stripe", "authentication", "rbac"]
-        },
-        {
-          "id": "exp-3-b2",
-          "text": "Built responsive React front-end components and a Node.js/Express back-end, delivering the MVP that secured a $2M seed funding round.",
-          "isActive": true,
-          "tags": ["react", "node.js", "express", "mvp"]
-        },
-        {
-          "id": "exp-3-b3",
-          "text": "Instrumented application monitoring and alerting using Datadog and PagerDuty, achieving observability across all critical services for the first time.",
-          "isActive": true,
-          "tags": ["monitoring", "datadog", "observability", "alerting"]
+          "tags": ["ui/ux", "cross-functional", "frontend"]
         }
       ]
     }
@@ -119,37 +80,100 @@
   "projects": [
     {
       "id": "proj-1",
-      "name": "OpenTrace – Distributed Tracing SDK",
-      "tech": "Go, gRPC, OpenTelemetry, Docker",
-      "description": "Open-source lightweight distributed tracing SDK for Go microservices. Implements the OpenTelemetry specification with automatic context propagation. Garnered 850+ GitHub stars and adopted by 3 open-source projects.",
+      "name": "NetCon (ATM Data Extractor)",
+      "tech": "Python (Flask), ElectronJS (Quasar)",
+      "description": "Developed a modular Windows application for Eastern Bank PLC using a Python (Flask) backend and ElectronJS (Quasar) frontend. Engineered interactive data visualization with multi-sorting and componentized UI for multi-vendor ATM/CRM EJ log data extraction.",
       "isActive": true
     },
     {
       "id": "proj-2",
-      "name": "ResumeForge – AI Resume Tailoring Tool",
-      "tech": "Next.js, TypeScript, OpenAI API, Supabase",
-      "description": "Full-stack SaaS application that uses LLM-based keyword extraction to help job seekers tailor their resumes to specific job descriptions. Processed 10,000+ resume exports in beta.",
+      "name": "Sharothee Wedding Platform",
+      "tech": "Next.js, TypeScript",
+      "description": "Created a full-stack event management website using Next.js and TypeScript, featuring guest-facing pages, automated RSVP handling, and a full admin dashboard for content management.",
       "isActive": true
     },
     {
       "id": "proj-3",
-      "name": "PriceWatch – E-Commerce Price Tracker",
-      "tech": "Python, FastAPI, PostgreSQL, Redis, React",
-      "description": "Web scraping and price alerting platform that monitors prices across 5 major retailers. Sends real-time alerts via email and SMS (Twilio). Supports 500+ concurrent user watchlists.",
+      "name": "SR600Mini POS Firmware",
+      "tech": "C",
+      "description": "Engineered firmware in C for a dual-screen POS Payment Terminal, implementing structured UI screens, transaction handling, and resource-aware display logic.",
       "isActive": true
     },
     {
       "id": "proj-4",
-      "name": "CodePulse – Developer Analytics Dashboard",
-      "tech": "React, D3.js, Node.js, GitHub API",
-      "description": "Personal productivity dashboard that aggregates GitHub contribution data and surfaces coding velocity trends, commit patterns, and code review turnaround times using interactive D3.js visualizations.",
+      "name": "Allora E-commerce REST API",
+      "tech": "Laravel Filament, Docker",
+      "description": "Developed a scalable backend using Laravel Filament to handle core e-commerce logic (product listings, authentication, order processing) for a containerized deployment. Built a storefront utilizing Server-Side Rendering (SSR) and Incremental Static Regeneration (ISR).",
+      "isActive": true
+    },
+    {
+      "id": "proj-5",
+      "name": "NSU eKYC System",
+      "tech": "Laravel, MySQL, REST API",
+      "description": "Built a student API-driven verification system using Laravel and MySQL with RESTful API integrations to external banks and hospitals for seamless data verification.",
       "isActive": true
     }
   ],
   "skills": {
-    "Languages": ["TypeScript", "JavaScript", "Python", "Go", "SQL", "Bash", "Ruby"],
-    "Frameworks": ["Node.js", "React", "Next.js", "Express", "FastAPI", "GraphQL", "gRPC"],
-    "Cloud": ["AWS (EC2, Lambda, S3, RDS, SQS)", "GCP (GKE, Cloud Run)", "Docker", "Kubernetes", "Terraform", "GitHub Actions"],
-    "Databases": ["PostgreSQL", "MySQL", "Redis", "MongoDB", "DynamoDB", "Apache Kafka"]
-  }
+    "Languages & Frameworks": [
+      "PHP (Laravel)",
+      "Python (Flask)",
+      "React (Next.js)",
+      "JavaScript/TypeScript",
+      "Node.js",
+      "TailwindCSS",
+      "SQL",
+      "C"
+    ],
+    "System Design": [
+      "Full-stack SDLC",
+      "RESTful API design",
+      "Microservice architecture",
+      "ETL data integration"
+    ],
+    "Databases": [
+      "MySQL",
+      "Oracle",
+      "PostgreSQL"
+    ],
+    "Cloud & DevOps": [
+      "AWS (S3, RDS, ECS)",
+      "Git CI/CD pipelines",
+      "Windows Server (IIS)",
+      "Docker"
+    ]
+  },
+  "education": [
+    {
+      "id": "edu-1",
+      "degree": "MS in Computer Science & Engineering",
+      "institution": "North South University, Dhaka",
+      "date": "2023 - Present",
+      "isActive": true
+    },
+    {
+      "id": "edu-2",
+      "degree": "BSc in Computer Science and Engineering",
+      "institution": "North South University, Dhaka",
+      "date": "Graduated",
+      "isActive": true
+    }
+  ],
+  "certifications": [
+    {
+      "id": "cert-1",
+      "name": "Oracle Cloud Infrastructure 2023 Solution Engineer & Sales Specialist",
+      "isActive": true
+    },
+    {
+      "id": "cert-2",
+      "name": "Oracle Exadata On-Premise 2022 Solutions Engineer Specialist",
+      "isActive": true
+    },
+    {
+      "id": "cert-3",
+      "name": "Oracle Database 19c - Introduction to SQL",
+      "isActive": true
+    }
+  ]
 }

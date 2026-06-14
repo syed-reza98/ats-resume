@@ -142,6 +142,8 @@ export default function Home() {
   const [warningDismissed, setWarningDismissed] = useState(false);
   const [jdText, setJdText] = useState("");
   const [isPrinting, setIsPrinting] = useState(false);
+  const [isAiLoading, setIsAiLoading] = useState(false);
+  const [aiError, setAiError] = useState<string | null>(null);
 
   const canvasRef = useRef<HTMLDivElement>(null);
 
@@ -241,6 +243,63 @@ export default function Home() {
         p.id !== projectId ? p : { ...p, isActive: !p.isActive }
       ),
     }));
+  }
+
+  // ── AI Auto-Tailor ─────────────────────────────────────────────────────
+  async function handleAITailor() {
+    if (!jdText.trim()) {
+      setAiError("Please paste a Job Description first.");
+      return;
+    }
+    setAiError(null);
+    setIsAiLoading(true);
+    try {
+      const response = await fetch("/api/tailor", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          jobDescription: jdText,
+          masterResume: resumeData,
+        }),
+      });
+
+      const aiData = await response.json();
+
+      if (!response.ok) {
+        const reason = aiData.hint ?? aiData.detail ?? aiData.error ?? `API error ${response.status}`;
+        throw new Error(reason);
+      }
+
+      // Apply title override from AI
+      if (aiData.targetTitle) setJobTitle(aiData.targetTitle);
+
+      // Apply all other AI decisions to resume state
+      setResume((prev) => ({
+        ...prev,
+        summary: aiData.tailoredSummary || prev.summary,
+        experience: prev.experience.map((job) => ({
+          ...job,
+          bullets: job.bullets.map((b) => ({
+            ...b,
+            isActive: Array.isArray(aiData.activeExperienceBulletIds)
+              ? aiData.activeExperienceBulletIds.includes(b.id)
+              : b.isActive,
+          })),
+        })),
+        projects: prev.projects.map((proj) => ({
+          ...proj,
+          isActive: Array.isArray(aiData.activeProjectIds)
+            ? aiData.activeProjectIds.includes(proj.id)
+            : proj.isActive,
+        })),
+      }));
+    } catch (err) {
+      const msg = err instanceof Error ? err.message : String(err);
+      console.error("AI Tailoring Error:", err);
+      setAiError(msg);
+    } finally {
+      setIsAiLoading(false);
+    }
   }
 
   // ── Counter colour: green in sweet-spot, amber below, red above ─────────
@@ -345,6 +404,43 @@ export default function Home() {
               <p className="text-xs text-gray-500 mt-1">
                 {jdKeywords.size} unique keywords extracted from JD.
               </p>
+            )}
+
+            {/* AI Auto-Tailor */}
+            <button
+              onClick={handleAITailor}
+              disabled={isAiLoading || !jdText.trim()}
+              className="mt-3 w-full flex items-center justify-center gap-2 rounded-md bg-gray-900 px-4 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-gray-700 active:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+              aria-label="Auto-tailor resume with AI"
+            >
+              {isAiLoading ? (
+                <>
+                  <span className="inline-block h-3.5 w-3.5 animate-spin rounded-full border-2 border-white border-t-transparent" aria-hidden="true" />
+                  Analyzing ATS Fit…
+                </>
+              ) : (
+                <>
+                  ✨ Auto-Tailor with AI
+                </>
+              )}
+            </button>
+
+            {/* Inline AI error message */}
+            {aiError && (
+              <div className="mt-2 flex items-start gap-2 rounded-md bg-red-50 border border-red-200 px-3 py-2.5">
+                <AlertTriangle size={14} className="text-red-500 mt-0.5 shrink-0" aria-hidden="true" />
+                <div className="min-w-0">
+                  <p className="text-xs font-semibold text-red-700 leading-snug">AI Tailoring Failed</p>
+                  <p className="text-xs text-red-600 mt-0.5 leading-relaxed break-words">{aiError}</p>
+                </div>
+                <button
+                  onClick={() => setAiError(null)}
+                  aria-label="Dismiss error"
+                  className="shrink-0 text-red-400 hover:text-red-600 transition-colors ml-auto"
+                >
+                  <X size={13} />
+                </button>
+              </div>
             )}
           </div>
 
